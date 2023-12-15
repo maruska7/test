@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <!-- Add your custom styles here -->
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,6 +38,7 @@
   <h1>My Gogole Project</h1>
   {% if user.is_authenticated %}
     <p>Welcome, You are logged in as {{ user.username }}</p>
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
   {% else %}
     <a class="login-link" href="{% provider_login_url 'google' %}">Login With Google</a>
   {% endif %}
